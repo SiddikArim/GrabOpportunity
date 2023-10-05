@@ -1,0 +1,22 @@
+
+--vlog--
+
+useRef
+useMemo
+custom hook
+Context api
+---------
+
+10 commits
+bullet points(eta kora jai ota kora jay)
+
+--bonus--
+
+4ta data show from 6 data
+4 tarei ghuray ghuray dekhavo
+jkn see all vtn e click korvo tkn sov data 6 ta dekhave
+
+
+filter vtn
+etay remote ar onsite option e jetay click korvo state er set kora data theka 
+filter kore oi oi filter option er data gula dekhavo
