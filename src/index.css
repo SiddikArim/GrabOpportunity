@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.switch{
+    @apply bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 active:scale-95 transition duration-150 ease-in-out text-white font-bold p-1 rounded 
+}
+ body{
+    width: 1080px;
+    margin: auto;
+ }
