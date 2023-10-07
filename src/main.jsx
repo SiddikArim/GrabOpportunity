@@ -19,8 +19,8 @@ const router = createBrowserRouter([
         element: <AppliedJobs></AppliedJobs>
       },
       {
-        path:'/main-content',
-        element:<MainContent></MainContent>
+        path:'/header',
+        element:<Header></Header>
       },
       {
         path:'/statistics',
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
 import './index.css'
 import Blog from './Components/Blog/Blog.jsx';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs.jsx';
-import MainContent from './Components/MainContent/MainContent.jsx';
+import Header from './Components/Header/Header.jsx';
 import Statistics from './Components/Statistics/Statistics.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

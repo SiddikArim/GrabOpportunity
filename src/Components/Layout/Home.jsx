@@ -5,8 +5,8 @@ const Home = () => {
     return (
         <div className='flex justify-between mt-5'>
             <div className='logo'>
-                <NavLink to='/main-content' className={({ isActive, isPending }) => isActive ? "text-purple-300" : isPending ? "pending" : ""}>
-                    <span className='text-3xl font-bold'>GrabOpportunity</span>
+                <NavLink to='/header' className={({ isActive, isPending }) => isActive ? '' : isPending ? "pending" : ""}>
+                    <span className='text-3xl font-bold textColor'>GrabOpportunity</span>
                 </NavLink>
             </div>
             <NavLink to='/applied-jobs' className={({ isActive, isPending }) => isActive ? "text-purple-500" : isPending ? "pending" : ""}>
@@ -20,7 +20,7 @@ const Home = () => {
             </NavLink>
             <div>
                 <button className='switch'>
-                    <NavLink to='/main-content' className={({ isActive, isPending }) => isActive ? "text-white-500" : isPending ? "pending" : ""}>
+                    <NavLink to='/header' className={({ isActive, isPending }) => isActive ? "text-white-500" : isPending ? "pending" : ""}>
                         Start Applying
                     </NavLink>
                 </button>

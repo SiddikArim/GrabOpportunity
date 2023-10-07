@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 .switch{
-    @apply bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 active:scale-95 transition duration-150 ease-in-out text-white font-bold p-1 rounded 
+    @apply bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 active:scale-95 transition duration-150 ease-in-out text-white font-bold p-2 rounded 
+}
+.textColor{
+    @apply bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent
+}
+.background{
+    @layer linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%)
 }
  body{
     width: 1080px;
