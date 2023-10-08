@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import locationImg from '../../assets/icons/Location.png';
 import moneyImg from "../../assets/icons/money.png";
+import { Link } from 'react-router-dom';
+
 const SingleFeatureJob = ({ jD }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = jD
+    const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = jD
     return (
         <div className='border pl-8 py-8 m-3 rounded border-inherit '>
             <div>
@@ -29,7 +31,9 @@ const SingleFeatureJob = ({ jD }) => {
                 </div>
             </div>
             {/* set new compo link where details will be showed */}
-            <button className='switch my-2'>View Details</button>
+           <div className='mt-5'>
+           <Link to={`/job/${id}`} className='switch '>View Details</Link>
+           </div>
         </div>
     );
 };

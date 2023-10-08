@@ -6,7 +6,7 @@ function App() {
   
 
   return (
-    <div>
+    <div >
         <Home></Home>
         <Outlet></Outlet>
     </div>

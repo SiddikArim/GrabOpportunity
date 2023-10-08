@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SingleCategory from '../SingleCategory/SingleCategory';
-import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
+
 
 const JobCategoryList = () => {
     const categories = useLoaderData()
@@ -15,7 +15,7 @@ const JobCategoryList = () => {
             </div>
             <div className='flex'>
                 {
-                    categories.map((category) =><SingleCategory
+                    categories ?.map(category =><SingleCategory
                     category={category}
                     key={category.id}
                     ></SingleCategory>)

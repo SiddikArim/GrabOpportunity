@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import './Home.css'
 const Home = () => {
     return (
-        <div className='flex justify-between mt-5'>
+        <div className='flex justify-between w-full mt-5 '>
             <div className='logo'>
-                <NavLink to='/header' className={({ isActive, isPending }) => isActive ? '' : isPending ? "pending" : ""}>
+                <NavLink to='/' className={({ isActive, isPending }) => isActive ? '' : isPending ? "pending" : ""}>
                     <span className='text-3xl font-bold textColor'>GrabOpportunity</span>
                 </NavLink>
             </div>
@@ -20,7 +20,7 @@ const Home = () => {
             </NavLink>
             <div>
                 <button className='switch'>
-                    <NavLink to='/header' className={({ isActive, isPending }) => isActive ? "text-white-500" : isPending ? "pending" : ""}>
+                    <NavLink to='/' className={({ isActive, isPending }) => isActive ? "text-white-500" : isPending ? "pending" : ""}>
                         Start Applying
                     </NavLink>
                 </button>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleFeatureJob from '../SingleFeatureJob/SingleFeatureJob';
+import { useLoaderData } from 'react-router-dom';
 
 const FeaturedJobs = () => {
     const [jobDatas, setJobDatas] = useState([])
