@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleFeatureJob from '../SingleFeatureJob/SingleFeatureJob';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { key } from 'localforage';
 
 const FeaturedJobs = () => {
     const [jobDatas, setJobDatas] = useState([])
@@ -28,14 +29,21 @@ const FeaturedJobs = () => {
                         key={jD.id}
                         jD={jD}
                     ></SingleFeatureJob>)
+                    
                 }
+                {/* {jobDatas.slice(0, prevVisData).map(jD => (
+                    <React.Fragment key={jD.id}>
+                        <SingleFeatureJob key={jD.id} jD={jD} />
+                        <li>go</li>
+                    </React.Fragment>
+                ))} */}
             </div>
             {/* show more sector */}
-           <div className='text-center'>
-           {
-                visData < jobDatas.length && (<button className='switch my-3' onClick={() => showMore()}>Show More</button>)
-            }
-           </div>
+            <div className='text-center'>
+                {
+                    visData < jobDatas.length && (<button className='switch my-3' onClick={() => showMore()}>Show More</button>)
+                }
+            </div>
         </div>
     );
 };
