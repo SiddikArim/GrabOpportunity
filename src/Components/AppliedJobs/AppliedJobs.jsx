@@ -7,19 +7,19 @@ import SingleFeatureJob from '../SingleFeatureJob/SingleFeatureJob';
 
 const AppliedJobs = () => {
     const jobs = useLoaderData();
-    
+
     const [appliedJobs, setAppliedJobs] = useState([]);
     const [displayJobs, setDisplayJobs] = useState([]);
 
-    const handleJobsFilter = filter =>{
-        if(filter === 'all'){
+    const handleJobsFilter = filter => {
+        if (filter === 'all') {
             setDisplayJobs(appliedJobs);
         }
-        else if (filter === 'remote'){
+        else if (filter === 'remote') {
             const remoteJobs = appliedJobs.filter(job => job.remote_or_onsite === 'Remote');
             setDisplayJobs(remoteJobs);
         }
-        else if(filter === 'onsite'){
+        else if (filter === 'onsite') {
             const onsiteJobs = appliedJobs.filter(job => job.remote_or_onsite === 'Onsite');
             setDisplayJobs(onsiteJobs);
         }
@@ -48,23 +48,24 @@ const AppliedJobs = () => {
     }, [jobs])
     return (
         <div>
-            <h2 className="text-2xl">Jobs I applied: {appliedJobs.length}</h2>
-            <details className="dropdown mb-32">
-                <summary className="m-1 text-right mr-10 ">Filter</summary>
-                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 ">
-                    <li className='switch mt-1' onClick={() => handleJobsFilter('all')}><a>All</a></li>
-                    <li className='switch mt-1' onClick={() => handleJobsFilter('remote')}><a>Remote</a></li>
-                    <li className='switch mt-1' onClick={() => handleJobsFilter('onsite')}><a>onsite</a></li>
-                </ul>
-            </details>
-            <ul className='grid grid-cols-2'>
+            <div className='flex justify-end'>
+                <details className="dropdown mt-20  mr-10">
+                    <summary className="m-1  mr-10 ">Filter</summary>
+                    <ul className="p-2 shadow menu dropdown-content  bg-base-100 rounded-box w-52 ">
+                        <li className='switch mt-1' onClick={() => handleJobsFilter('all')}><a>All</a></li>
+                        <li className='switch mt-1' onClick={() => handleJobsFilter('remote')}><a>Remote</a></li>
+                        <li className='switch mt-1' onClick={() => handleJobsFilter('onsite')}><a>onsite</a></li>
+                    </ul>
+                </details>
+            </div>
+            <div className='grid grid-cols-2 '>
                 {
                     displayJobs?.map(jD => <SingleFeatureJob
                         key={jD.id}
                         jD={jD}
-                        ></SingleFeatureJob>)
+                    ></SingleFeatureJob>)
                 }
-            </ul>
+            </div>
         </div>
     );
 };
