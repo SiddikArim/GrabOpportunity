@@ -2,30 +2,15 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
-            <h2 className='btn btn-primary'>Hi from vlog</h2>
-            <p className='text-center'>
-                --vlog--<br />
-
-                useRef <br />
-                useMemo <br />
-                custom hook <br />
-                Context api <br />
-                ---------<br />
-
-                10 commits <br /> 
-                bullet points(eta kora jai ota kora jay)<br />
-
-                --bonus--<br />
-
-                4ta data show from 6 data<br />
-                4 tarei ghuray ghuray dekhavo<br />
-                jkn see all vtn e click korvo tkn sov data 6 ta dekhave<br />
-
-
-                filter vtn<br />
-                etay remote ar onsite option e jetay click korvo state er set kora data theka<br />
-                filter kore oi oi filter option er data gula dekhavo</p>
+        <div className='mt-10'>
+            <h2 className='font-bold text-2xl'>When should you use context API?</h2>
+            <p> Use the Context API in React when you need to pass data to components without manually passing props through every level.</p>
+            <h2 className='font-bold text-2xl'>What is a custom hook?</h2>
+            <p>A custom hook in React is a JavaScript function that lets you use state and lifecycle features in functional components.</p>
+            <h2 className='font-bold text-2xl'>What is useRef?</h2>
+            <p>useRef is a React hook that returns a mutable object, allowing you to persist values across renders without causing re-renders.</p>
+            <h2 className='font-bold text-2xl'>What is useMemo?</h2>
+            <p>useMemo is a React hook that memoizes the result of a function, optimizing performance by preventing unnecessary recalculations in functional components.</p>
         </div>
     );
 };
